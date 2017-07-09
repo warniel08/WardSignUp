@@ -1,3 +1,9 @@
-<h1>Members#index</h1>
+<h1>List of Members</h1>
 
+<% @members.each do |member| %>
+	<p><%= link_to member.family_last_name, member_path(member) %></p>
+<% end %>
+<br>
+<br>
 
+<%= link_to 'Home', root_path %>
