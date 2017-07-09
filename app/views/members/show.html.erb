@@ -1,5 +1,27 @@
-<h1>Show page</h1>
+<h1><%= @member.family_last_name %> Information</h1>
 
+<h3>General Information</h3>
+<table>
+	<tr>
+		<th>Family Name</th>
+		<th>Ward Entrance Date</th>
+		<th>Address</th>
+		<th>Expected Ward Exit Date</th>
+		<th>Marriage Date</th>
+		<th>Husband's Previous Ward</th>
+		<th>Wife's Previous Ward</th>
+	</tr>
+	<tr>
+		<td><%= @member.family_last_name %></td>
+		<td><%= @member.date_enter_ward %></td>
+		<td><%= @member.address %></td>
+		<td><%= @member.expected_exit_date %></td>
+		<td><%= @member.marriage_date %></td>
+		<td><%= @member.husband_prev_ward %></td>
+		<td><%= @member.wife_prev_ward %></td>
+	</tr>
+</table>
+<br>
 <%= link_to 'Home', root_path %>
 
 <%= render 'layouts/footer'%>
