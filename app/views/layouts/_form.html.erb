@@ -1,0 +1,36 @@
+<center>
+	<%= form_for :member, url: members_path do |f| %>
+		<h2 id="general-info">General Information</h2>
+		<p>Family Last Name: <%= f.text_field :family_last_name %></p>
+		<p>Ward Entrance Date: <%= f.date_field :date_enter_ward %></p>
+		<p>Address: <%= f.text_field :address %></p>
+		<p>Expected Ward Exit Date: <%= f.date_field :expected_exit_date %></p>
+		<p>Marriage Date: <%= f.date_field :marriage_date %></p>
+		<p>Husband's Previous Ward: <%= f.text_field :husband_prev_ward %></p>
+		<p>Wife's Previous Ward: <%= f.text_field :wife_prev_ward %></p>
+	
+		<h2 id="husband-info">Husband's Information </h2>
+		<p>First Name: <%= f.text_field :husband_first_name %></p>
+		<p>Last Name: <%= f.text_field :husband_last_name %></p>
+		<p>Birthday: <%= f.date_field :husband_birthday %></p>
+		<p>Record Number (Optional): <%= f.text_field :husband_record_num %></p>
+
+		<h2 id="wife-info">Wife's Information</h2>
+		<p>First Name: <%= f.text_field :wife_first_name %></p>
+		<p>Last Name: <%= f.text_field :wife_last_name %></p>
+		<p>Birthday: <%= f.date_field :wife_birthday %></p>
+		<p>Record Number (Optional): <%= f.text_field :wife_record_num %></p>
+
+		<h2>Children</h2>
+		<p>Do you have children?</p>
+		<%= f.radio_button :children, 'yes' %>
+		<%= label :children_yes, 'Yes' %>
+		<%= f.radio_button :children, 'no' %>
+		<%= label :children_no, 'No' %>
+
+		<p>
+			<%= f.submit 'Submit' %>
+		</p>
+
+	<% end %>
+</center>
