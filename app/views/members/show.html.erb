@@ -10,6 +10,7 @@
 		<th>Marriage Date</th>
 		<th>Husband's Previous Ward</th>
 		<th>Wife's Previous Ward</th>
+		<th>Children</th>
 	</tr>
 	<tr>
 		<td><%= @member.family_last_name %></td>
@@ -19,8 +20,46 @@
 		<td><%= @member.marriage_date %></td>
 		<td><%= @member.husband_prev_ward %></td>
 		<td><%= @member.wife_prev_ward %></td>
+		<% if @member.children === true %>
+			<td>Yes</td>
+		<% else %>
+			<td>No</td>
+		<% end %>
 	</tr>
 </table>
+
+<h3>Husband Information</h3>
+<table>
+	<tr>
+		<th>First Name</th>
+		<th>Last Name</th>
+		<th>Birthday</th>
+		<th>Record Number (if provided)</th>
+	</tr>
+	<tr>
+		<td><%= @member.husband_first_name %></td>
+		<td><%= @member.husband_last_name %></td>
+		<td><%= @member.husband_birthday %></td>
+		<td><%= @member.husband_record_num %></td>
+	</tr>
+</table>
+
+<h3>Wife Information</h3>
+<table>
+	<tr>
+		<th>First Name</th>
+		<th>Last Name</th>
+		<th>Birthday</th>
+		<th>Record Number (if provided)</th>
+	</tr>
+	<tr>
+		<td><%= @member.wife_first_name %></td>
+		<td><%= @member.wife_last_name %></td>
+		<td><%= @member.wife_birthday %></td>
+		<td><%= @member.wife_record_num %></td>
+	</tr>
+</table>
+
 <br>
 <%= link_to 'Back', members_path %><br>
 <%= link_to 'Home', root_path %>

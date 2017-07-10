@@ -23,10 +23,10 @@
 
 		<h2>Children</h2>
 		<p>Do you have children?</p>
-		<%= f.radio_button :children, 'yes' %>
-		<%= label :children_yes, 'Yes' %>
-		<%= f.radio_button :children, 'no' %>
-		<%= label :children_no, 'No' %>
+		<%= f.radio_button :children, true %>
+		<%= label :children_yes, 'Yes', :value => true %>
+		<%= f.radio_button :children, false %>
+		<%= label :children_no, 'No', :value => false %>
 
 		<p>
 			<%= f.submit 'Submit' %>
